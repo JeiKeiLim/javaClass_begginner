@@ -37,7 +37,6 @@ public class Main {
 		
 		Bicycle.temp = 10;
 		System.out.println("임시 변수는 " + Bicycle.temp + "입니다.");
-		
 		Bicycle.temp = 22;
 		
 		System.out.println("임시 변수는 " + Bicycle.temp + "입니다.");

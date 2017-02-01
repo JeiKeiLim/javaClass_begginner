@@ -1,7 +1,6 @@
 package com.jeikei.animal;
 
 public class Main {
-	
 	public static void main(String[] args)
 	{
 		Dog myDog = new Dog(10, 2);
@@ -22,7 +21,7 @@ public class Main {
 //		myHuman.sayName();
 //		myHuman.setName("Áö¿ì");
 //		myHuman.sayName();
-//		
+
 //		Poodle myPoodle = new Poodle(3);
 //		myPoodle.show_property();
 //		myPoodle.bark();

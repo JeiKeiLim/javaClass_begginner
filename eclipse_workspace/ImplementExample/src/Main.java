@@ -2,7 +2,6 @@
 public class Main{
 	
 	static InterfaceExample listener = new InterfaceExample() {
-		
 		@Override
 		public void test2() {
 
