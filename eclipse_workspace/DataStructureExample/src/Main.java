@@ -1,35 +1,16 @@
-import java.util.Stack;
-
-import com.jeikei.data.ArrayQueue;
+import com.jeikei.data.CircularQueue;
 
 public class Main {
 	public static void main(String[] args)
 	{
-		Stack<Integer> stack = new Stack<>();
+		CircularQueue circularQueue = new CircularQueue(5);
 		
-		stack.push(10);
-		stack.push(20);
-		stack.push(30);
+		for(int i=0; i<10; i++)
+			circularQueue.putData(i);
 		
-		System.out.println(stack.pop());
-		System.out.println(stack.pop());
-		System.out.println(stack.pop());
-		System.out.println("");
-		
-		ArrayQueue aQueue = new ArrayQueue();
-		
-		aQueue.addValue(10);
-		aQueue.addValue(20);
-		aQueue.addValue(30);
-		
-		System.out.println(aQueue.getFirstQueue());
-		System.out.println(aQueue.getFirstQueue());
-		System.out.println(aQueue.getFirstQueue());
-		
-		try{
-			System.out.println(aQueue.getFirstQueue());
-		} catch(IndexOutOfBoundsException e){
-			System.out.println("데이터가 더 없습니다");
+		for(int i=0; i<10; i++)
+		{
+			System.out.println(circularQueue.getData());
 		}
 	}
 }
