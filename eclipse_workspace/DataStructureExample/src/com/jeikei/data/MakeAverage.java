@@ -83,4 +83,11 @@ public class MakeAverage {
 		return result;
 	}
 	
+	public double getStandardVariance()
+	{
+		double var = getVariance();
+		
+		return Math.sqrt(var);
+	}
+	
 }

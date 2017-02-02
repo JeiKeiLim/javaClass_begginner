@@ -29,7 +29,8 @@ public class Main {
 		
 		System.out.println("\ntemp의 평균은 " + mAverage.getAverage() +
 							"입니다.\n" +
-				"temp의 편차는 " + mAverage.getVariance() + "입니다.\n" + 
+				"temp의 편차는 " + mAverage.getVariance() + "입니다.\n" +
+				"temp의 표준편차는 " + mAverage.getStandardVariance() + "입니다.\n" +
 				"temp의 크기는 " + mAverage.getSize() + "입니다");
 	}
 }
