@@ -1,36 +1,35 @@
-import java.util.Scanner;
+import java.util.Stack;
 
-import com.jeikei.data.MakeAverage;
+import com.jeikei.data.ArrayQueue;
 
 public class Main {
 	public static void main(String[] args)
 	{
-		MakeAverage mAverage = new MakeAverage();
-		Scanner scan= new Scanner(System.in);
+		Stack<Integer> stack = new Stack<>();
 		
-		while(true)
-		{
-			String currentTxt = scan.nextLine();
-			
-			if(currentTxt.compareTo("q!") == 0)
-				break;
-			else
-			{
-				try{
-					int currentValue = Integer.parseInt(currentTxt);
-					mAverage.addValue(currentValue);
-					
-					System.out.println("현재 평균은 " + mAverage.getAverage() + "입니다");
-				} catch(NumberFormatException e) {
-					System.out.println("잘못 입력 하셨습니다. 다시 입력 해주세요");
-				}
-			}
+		stack.push(10);
+		stack.push(20);
+		stack.push(30);
+		
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println("");
+		
+		ArrayQueue aQueue = new ArrayQueue();
+		
+		aQueue.addValue(10);
+		aQueue.addValue(20);
+		aQueue.addValue(30);
+		
+		System.out.println(aQueue.getFirstQueue());
+		System.out.println(aQueue.getFirstQueue());
+		System.out.println(aQueue.getFirstQueue());
+		
+		try{
+			System.out.println(aQueue.getFirstQueue());
+		} catch(IndexOutOfBoundsException e){
+			System.out.println("데이터가 더 없습니다");
 		}
-		
-		System.out.println("\ntemp의 평균은 " + mAverage.getAverage() +
-							"입니다.\n" +
-				"temp의 편차는 " + mAverage.getVariance() + "입니다.\n" +
-				"temp의 표준편차는 " + mAverage.getStandardVariance() + "입니다.\n" +
-				"temp의 크기는 " + mAverage.getSize() + "입니다");
 	}
 }
