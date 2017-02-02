@@ -65,4 +65,22 @@ public class MakeAverage {
 		return result;
 	}
 	
+	/**
+	 * 편차를 구한다.
+	 * 
+	 * @return 편차 값
+	 */
+	public double getVariance()
+	{
+		double avg = getAverage();
+		double result = 0;
+		
+		for(int v : value)
+		{
+			result += Math.pow(avg-v, 2);
+		}
+		
+		return result;
+	}
+	
 }
