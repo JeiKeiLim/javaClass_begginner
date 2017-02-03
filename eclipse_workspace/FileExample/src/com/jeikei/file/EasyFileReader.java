@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class EasyFileReader extends EasyFileOpener{
-	private char[] buffer = new char[32];
+	private char[] buffer = new char[512];
 	private FileReader fReader;
 
 	public EasyFileReader(String fileName) {
@@ -28,9 +28,11 @@ public class EasyFileReader extends EasyFileOpener{
 		String result = "";
 		
 		try {
-			fReader.read(buffer);
-			result = String.valueOf(buffer);
+			int readSize = fReader.read(buffer);
+			result = new String(buffer, 0, readSize);
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (StringIndexOutOfBoundsException e) {
 			e.printStackTrace();
 		}
 		
