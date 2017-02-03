@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class EasyFileReader extends EasyFileOpener{
-	private char[] buffer = new char[512];
+	private char[] buffer = new char[2048];
 	private FileReader fReader;
 
 	public EasyFileReader(String fileName) {
